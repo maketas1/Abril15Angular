@@ -1,4 +1,4 @@
-export interface ejercicio1 {
+export interface Loan {
     principal: number;
     interestRate: number;
 }
