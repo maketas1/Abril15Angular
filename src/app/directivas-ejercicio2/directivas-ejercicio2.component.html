@@ -1,0 +1,56 @@
+<h1>Ejercicio 2</h1>
+<div>
+    <h2>Reserva de vuelos</h2>
+  
+    <div>
+      <label>Origen:</label>
+      <br>
+      <select id="origenSeleccionado" [(ngModel)]="origenSeleccionado">
+        @for (origen1 of origen; track origen1) {
+          <option>{{ origen1 }}</option>
+        }
+      </select>
+    </div>
+  
+    <div>
+      <label>Destino:</label>
+      <br>
+      <select id="destinoSeleccionado" [(ngModel)]="destinoSeleccionado">
+        @for (destino1 of destino; track destino1) {
+          <option>{{ destino1 }}</option>
+        }
+      </select>
+    </div>
+
+    <div>
+      <label>Fecha de ida:</label>
+      <br>
+      <select id="idaSeleccionada" [(ngModel)]="idaSeleccionada">
+        @for (ida of fechaDeIda; track ida) {
+          <option>{{ ida }}</option>
+        }
+      </select>
+    </div>
+
+    <div>
+        <label>Fecha de vuelta:</label>
+        <br>
+        <select id="vueltaSeleccionada" [(ngModel)]="vueltaSeleccionada">
+            @for (vuelta of fechaDeVuelta; track vuelta) {
+            <option>{{ vuelta }}</option>
+            }
+        </select>
+    </div>
+
+    <div>
+        <label>Número de pasajeros:</label>
+        <br>
+        <select id="pasajerosSeleccionados" [(ngModel)]="pasajerosSeleccionados">
+            @for (numeroDePasajero of numeroDePasajeros; track numeroDePasajero) {
+            <option>{{ numeroDePasajero }}</option>
+            }
+        </select>
+    </div>
+
+    <button (click)="mostrarInfo()">Mostrar Información</button>
+  </div>

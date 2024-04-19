@@ -1,0 +1,44 @@
+<h1>Ejercicio 1 de Directivas</h1>
+
+<div>
+    <h2>Arma tu PC</h2>
+  
+    <div>
+      <label>Tamaño de la RAM:</label>
+      <select id="ramSelect" [(ngModel)]="selectedRam">
+        @for (ramOption of ramOptions; track ramOption) {
+          <option>{{ ramOption }}</option>
+        }
+      </select>
+    </div>
+  
+    <div>
+      <label>Tipo de procesador:</label>
+      <select id="processorSelect" [(ngModel)]="selectedProcessor">
+        @for (processorOption of processorOptions; track processorOption) {
+          <option>{{ processorOption }}</option>
+        }
+      </select>
+    </div>
+  
+    <div>
+      <label>Tarjeta Gráfica:</label>
+      <input type="checkbox" id="graphicsCardCheckbox" [(ngModel)]="graphicsCardSelected">
+    </div>
+  
+    <div>
+      <label>Discos Duros:</label>
+      <select id="hardDriveSelect" [(ngModel)]="selectedHardDrive">
+        @for (hardDriveOption of hardDriveOptions; track hardDriveOption) {
+          <option>{{ hardDriveOption }}</option>
+        }
+      </select>
+    </div>
+  
+    <div>
+      <label>Fuentes de Alimentación:</label>
+      <input type="number" id="powerSupplyInput" [(ngModel)]="powerSupply">
+    </div>
+  
+    <button (click)="displayInformation()">Mostrar Información</button>
+  </div>

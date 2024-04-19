@@ -1,0 +1,27 @@
+<h1>Ejercicio 3</h1>
+<div class="exercise-container">
+    <h2>Usando directivas</h2>
+    <div class="gender">
+      <label>Género:</label>
+      @for (genero of generos; track genero) {
+        <input type="radio" value="{{genero}}">{{genero}}
+      }
+    </div>
+    <div class="nationalities">
+      <label>Nacionalidades:</label>
+      <select [(ngModel)]="default">
+        @for (nationality of nationalitiesList; track nationality) {
+            <option>{{ nationality }}</option>
+        }
+      </select>
+    </div>
+    <div class="programming-languages">
+      <label>Lenguajes de Programación:</label>
+      <div>
+        @for (language of programmingLanguagesList; track language) {
+            <input type="checkbox" id="programas" [value]="programas"> {{ language }}
+        }
+      </div>
+    </div>
+    <button (click)="showInformation()">Mostrar información</button>
+  </div>
